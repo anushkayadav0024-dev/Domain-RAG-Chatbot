@@ -1,8 +1,0 @@
-pypdf
-langchain-text-splitters
-langchain-core
-sentence-transformers
-faiss-cpu
-google-genai
-python-dotenv
-streamlit

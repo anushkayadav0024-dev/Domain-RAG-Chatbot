@@ -16,33 +16,27 @@ if not api_key:
 
 client = genai.Client(api_key=api_key)
 
-
 def generate_answer(question, retrieved_chunks):
-
     context = "\n\n".join(
         chunk.page_content
         for chunk in retrieved_chunks
     )
 
-    prompt = create_prompt(
-        context,
-        question
-    )
+    prompt = create_prompt(context, question)
 
     for attempt in range(3):
-
         try:
-
             response = client.models.generate_content(
                 model="gemini-3.6-flash",
                 contents=prompt,
                 config={"tools": []}
             )
 
-            return response.text
+            answer = response.text.strip()
+
+            return answer
 
         except Exception as e:
-
             error_message = str(e)
 
             is_server_error = (
@@ -52,7 +46,6 @@ def generate_answer(question, retrieved_chunks):
             )
 
             if is_server_error:
-
                 if attempt < 2:
                     time.sleep(3)
                     continue
