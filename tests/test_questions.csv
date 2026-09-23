@@ -1,0 +1,16 @@
+Test ID,Question,Expected Availability,Expected Result
+1,What is Artificial Intelligence?,Present,Check answer and source page
+2,What is Machine Learning?,Present,Check answer and source page
+3,How is Machine Learning related to Artificial Intelligence?,Present,Check answer is grounded in PDF
+4,What is Supervised Learning?,Present,Check answer and source page
+5,What is Unsupervised Learning?,Present,Check answer and source page
+6,What is Deep Learning?,Present,Check answer and source page
+7,What are applications of Artificial Intelligence?,Present,Check answer and source page
+8,Which topic discusses learning patterns from data?,Present,Check retrieval
+9,Which section describes learning without labelled examples?,Present,Check retrieval
+10,Which section discusses neural networks?,Present/verify,Check retrieval
+11,What is the relationship between Deep Learning and Machine Learning?,Present/verify,Check against uploaded document
+12,What applications of AI are mentioned in the uploaded document?,Present,Check all relevant points
+13,Who is the CEO of the company described in the document?,Absent,Should refuse if not present
+14,What is the company's annual revenue?,Absent,Should refuse if not present
+15,What is the employee leave policy?,Absent,Should refuse if not present
